@@ -10,7 +10,6 @@ namespace DonationManagement.BusinessLayer.ViewModels
     public class RegisterDonationRequestViewModel
     {
         public long DonationRequestId { get; set; }
-        [Required(ErrorMessage = "Amount is required")]
         public decimal Amount { get; set; }
         public string Status { get; set; }
         public DateTime EndDate { get; set; }

@@ -5,8 +5,6 @@ namespace DonationManagement.Entities
 {
     public class Donation
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long DonationId { get; set; }
         public string Type { get; set; }
         public decimal Amount { get; set; }

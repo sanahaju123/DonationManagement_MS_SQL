@@ -5,8 +5,6 @@ namespace DonationManagement.Entities
 {
     public class DonationRequest
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long DonationRequestId { get; set; }
         public decimal Amount { get; set; }
         public string Status { get; set; }

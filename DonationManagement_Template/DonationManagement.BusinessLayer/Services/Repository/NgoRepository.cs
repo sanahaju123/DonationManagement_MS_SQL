@@ -26,14 +26,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<NgoDetails> FindNgoById(long  ngoId)
         {
-            try
-            {
-                return await _ngoContext.NgoDetails.FindAsync(ngoId);
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
 
 
@@ -45,16 +39,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<NgoDetails> Register(NgoDetails ngoDetails, string password)
         {
-            try
-            {
-                var result = await _ngoContext.NgoDetails.AddAsync(ngoDetails);
-                await _ngoContext.SaveChangesAsync();
-                return ngoDetails;
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -64,24 +50,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<NgoDetails> UpdateNgo(RegisterNgoViewModel model)
         {
-            var ngo = await _ngoContext.NgoDetails.FindAsync(model.NgoId);
-            try
-            {
-                ngo.Name = model.Name;
-                ngo.Username = model.Username;
-                ngo.StartedIn = DateTime.Now;
-                ngo.Phone = model.Phone;
-                ngo.Password = model.Password;
-                ngo.IsDeleted = model.IsDeleted;
-
-                _ngoContext.NgoDetails.Update(ngo);
-                await _ngoContext.SaveChangesAsync();
-                return ngo;
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -90,16 +60,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<NgoDetails>> ListAllNgos()
         {
-            try
-            {
-                var result = _ngoContext.NgoDetails.
-                OrderByDescending(x => x.StartedIn).Take(10).ToList();
-                return result;
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
     }
 }

@@ -24,14 +24,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<Donor> FindDonorById(long donorId)
         {
-            try
-            {
-                return await _ngoContext.Donors.FindAsync(donorId);
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -42,16 +36,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<Donor> Register(Donor donor, string password)
         {
-            try
-            {
-                var result = await _ngoContext.Donors.AddAsync(donor);
-                await _ngoContext.SaveChangesAsync();
-                return donor;
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -61,26 +47,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<Donor> UpdateDonor(RegisterDonorViewModel model)
         {
-            var donor = await _ngoContext.Donors.FindAsync(model.DonorId);
-            try
-            {
-                donor.Name = model.Name;
-                donor.Username = model.Username;
-                donor.Email = model.Email;
-                donor.Password = model.Password;
-                donor.Phone = model.Phone;
-                donor.Address = model.Address;
-                donor.NgoId = model.NgoId;
-                donor.IsDeleted = model.IsDeleted;
-
-                _ngoContext.Donors.Update(donor);
-                await _ngoContext.SaveChangesAsync();
-                return donor;
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -89,16 +57,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Donor>> ListAllDonors()
         {
-            try
-            {
-                var result = _ngoContext.Donors.
-                OrderByDescending(x => x.DonorId).Take(10).ToList();
-                return result;
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -108,17 +68,8 @@ namespace DonationManagement.BusinessLayer.Services.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Donor>> GetDonorByNgoId(long ngoId)
         {
-            try
-            {
-                var result = _ngoContext.Donors.
-                Where(x => x.NgoId == ngoId).ToList();
-                return result;
-            }
-            catch (Exception ex)
-            {
-                throw (ex);
-            }
-
+            //Write Your Code Here
+            throw new NotImplementedException();
         }
     }
 }

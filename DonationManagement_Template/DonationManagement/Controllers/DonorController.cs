@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 
 namespace DonationManagement.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class DonorController : ControllerBase
     {

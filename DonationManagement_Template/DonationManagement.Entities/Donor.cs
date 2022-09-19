@@ -6,8 +6,6 @@ namespace DonationManagement.Entities
 {
     public class Donor
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long DonorId { get; set; }
         public string Name { get; set; }
         public string Username { get; set; }
